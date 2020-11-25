@@ -4,18 +4,18 @@ package cl.sebastian.elclima;
 
 public class DailyWeather {
 
-    private String Ciudad;
-    private String Fecha;
-    private String imagenDeClima;
-    private String Temperatura;
-    private String grados;
+     String Ciudad;
+     String Fecha;
+     int imagenDeClima;
+     String Temperatura;
+     String grados;
 
 
-    public DailyWeather(String ciudad, String fecha, String imagenDeClima, String temperatura, String grados) {
-        Ciudad = ciudad;
-        Fecha = fecha;
+    public DailyWeather(String ciudad, String fecha, int imagenDeClima, String temperatura, String grados) {
+       this.Ciudad = ciudad;
+        this.Fecha = fecha;
         this.imagenDeClima = imagenDeClima;
-        Temperatura = temperatura;
+        this.Temperatura = temperatura;
         this.grados = grados;
     }
 
@@ -24,7 +24,7 @@ public class DailyWeather {
     }
 
     public void setCiudad(String ciudad) {
-        Ciudad = ciudad;
+        this.Ciudad= ciudad;
     }
 
     public String getFecha() {
@@ -32,14 +32,14 @@ public class DailyWeather {
     }
 
     public void setFecha(String fecha) {
-        Fecha = fecha;
+        this.Fecha = fecha;
     }
 
-    public String getImagenDeClima() {
+    public int getImagenDeClima() {
         return imagenDeClima;
     }
 
-    public void setImagenDeClima(String imagenDeClima) {
+    public void setImagenDeClima(int imagenDeClima) {
         this.imagenDeClima = imagenDeClima;
     }
 
@@ -48,7 +48,7 @@ public class DailyWeather {
     }
 
     public void setTemperatura(String temperatura) {
-        Temperatura = temperatura;
+        this.Temperatura = temperatura;
     }
 
     public String getGrados() {
@@ -59,7 +59,7 @@ public class DailyWeather {
         this.grados = grados;
     }
 
-    @Override
+   /* @Override
     public String toString() {
         return "DailyWeather{" +
                 "Ciudad='" + Ciudad + '\'' +
@@ -67,7 +67,6 @@ public class DailyWeather {
                 ", imagenDeClima='" + imagenDeClima + '\'' +
                 ", Temperatura='" + Temperatura + '\'' +
                 ", grados='" + grados + '\'' +
-                '}';
+                '}';*/
     }
 
-}

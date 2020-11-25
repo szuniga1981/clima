@@ -48,6 +48,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TVunMedida"
         app:layout_constraintVertical_bias="0.075"
+        imageResource="@{weather.imagenDeClima}"
         tools:srcCompat="@drawable/ic_sky_cloud" />
 
     <EditText
@@ -65,10 +66,11 @@
         android:id="@+id/TVunMedida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="498dp"
         android:text="@{weather.grados}"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/TVtemperatura"
-        tools:layout_editor_absoluteY="214dp" />
+        app:layout_constraintStart_toEndOf="@+id/TVtemperatura" />
 
 </androidx.constraintlayout.widget.ConstraintLayout></layout>

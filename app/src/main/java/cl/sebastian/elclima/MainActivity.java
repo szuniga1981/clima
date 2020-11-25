@@ -8,13 +8,27 @@ import android.os.Bundle;
 import cl.sebastian.elclima.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-    private ActivityMainBinding binding;
+    ActivityMainBinding binding;
+    DailyWeather dwTiempo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-       ActivityMainBinding binding= DataBindingUtil.setContentView(this,R.layout.activity_main);
-        binding.setWeather(new DailyWeather("","","@drawable/ic_sky_cloud" ,"",""));
+        initData();
+        initView();
     }
+    ///setContentView(R.layout.activity_main);
+    // ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
+
+    private void initData() {
+        dwTiempo = new DailyWeather("viña", "24-11-2020", R.drawable.ic_sky_cloud,"","");
+    }
+
+    private void initView() {
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.setWeather(dwTiempo);
+    }
+
 }
+
