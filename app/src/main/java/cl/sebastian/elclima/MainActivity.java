@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ActivityMainBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
-        binding.setWeather(new DailyWeather("santiago","22/10/2020","","20","°c"));
+       ActivityMainBinding binding= DataBindingUtil.setContentView(this,R.layout.activity_main);
+        binding.setWeather(new DailyWeather("","","@drawable/ic_sky_cloud" ,"",""));
     }
 }
