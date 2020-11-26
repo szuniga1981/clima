@@ -8,69 +8,73 @@
             type="cl.sebastian.elclima.DailyWeather" />
     </data>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background_grandient1"
-    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/design_default_color_background"
+        tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/TVciudad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@{weather.ciudad}"
-        app:layout_constraintBottom_toTopOf="@+id/TVunMedida"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVfecha" />
+        <TextView
+            android:id="@+id/TVciudad"
+            android:layout_width="211dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="108dp"
+            android:padding="4dp"
+            android:text="@{weather.ciudad}"
+            android:textAlignment="gravity"
+            android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVfecha" />
 
-    <TextView
-        android:id="@+id/TVtemperatura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginRight="120dp"
-        android:text="@{weather.temperatura}"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVciudad"
-        app:layout_constraintVertical_bias="0.13" />
+        <TextView
+            android:id="@+id/TVtemperatura"
+            android:layout_width="94dp"
+            android:layout_height="97dp"
+            android:layout_marginStart="100dp"
+            android:text="@{weather.temperatura}"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/IVclima"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVciudad" />
 
-    <ImageView
-        android:id="@+id/IVclima"
-        android:layout_width="140dp"
-        android:layout_height="213dp"
-        android:layout_marginTop="176dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVunMedida"
-        app:layout_constraintVertical_bias="0.075"
-        imageResource="@{weather.imagenDeClima}"
-        tools:srcCompat="@drawable/ic_sky_cloud" />
+        <ImageView
+            android:id="@+id/IVclima"
+            imageResource="@{weather.imagenDeClima}"
+            android:layout_width="140dp"
+            android:layout_height="213dp"
+            android:layout_marginBottom="92dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@drawable/ic_sky_cloud" />
 
-    <EditText
-        android:id="@+id/TVfecha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date"
-        android:text="@{weather.fecha}"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/TVfecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:ems="10"
+            android:inputType="date"
+            android:text="@{weather.fecha}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/TVunMedida"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="498dp"
-        android:text="@{weather.grados}"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/TVtemperatura" />
+        <TextView
+            android:id="@+id/TVunMedida"
+            android:layout_width="43dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="100dp"
+            android:text="@{weather.grados}"
+            app:layout_constraintBottom_toTopOf="@+id/IVclima"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/TVtemperatura"
+            app:layout_constraintTop_toTopOf="@+id/TVtemperatura"
+            app:layout_constraintVertical_bias="0.0" />
 
-</androidx.constraintlayout.widget.ConstraintLayout></layout>
+    </androidx.constraintlayout.widget.ConstraintLayout></layout>

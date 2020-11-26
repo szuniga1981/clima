@@ -22,8 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initData() {
-        dwTiempo = new DailyWeather("viña", "24-11-2020", R.drawable.ic_sky_cloud,"","");
-    }
+        dwTiempo = new DailyWeather("viña", "24-11-2020", R.drawable.ic_sky_cloud,"12","°C");
+
+        }
 
     private void initView() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
